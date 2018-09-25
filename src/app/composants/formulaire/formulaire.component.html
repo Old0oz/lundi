@@ -1,3 +1,151 @@
-<p>
-  formulaire works!
-</p>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+
+
+
+
+<div class="container">
+    
+  <h1><span class="fa fa-cutlery"> </span>  Choisissez une recette</h1>
+    <form class="navbar-form inline-form">
+    
+      <!------ Barre de recherche -->
+        <div id="recherche" class="form-group">
+    
+          <input id="inputrecherche" type="search" class="input-sm form-control" placeholder="Chercher une recette ">
+    
+          <button id="buttonrecherche" type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span></button>
+
+        </div>
+    </form>
+
+
+
+<!------- Checkbox Filtres -->
+        <div id="filtres" class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox">
+            <label id="label" class="form-check-label" for="inlineCheckbox1">Entrée</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox">
+            <label id="label" class="form-check-label" for="inlineCheckbox2">Plat</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox">
+              <label id="label" class="form-check-label" for="inlineCheckbox2">Végétarien</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox">
+              <label id="label" class="form-check-label" for="inlineCheckbox2">Rapide</label>
+          </div>
+<div>
+         <button id="atable1" type="button" class="btn btn-info"><span class="fa fa-shopping-basket"> </span> A table !</button>
+
+<!----- Barre CREER RECETTE
+<div id="creer" class="input-group">
+    <div class="input-group-btn">
+      <input id="inputcreer" type="text" class="input-sm form-control" placeholder="Créer une recette">
+      <button id="buttoncreer" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type de plat</button>
+      <ul class="dropdown-menu">
+        <li><a title="Lien 1">Entrée</a></li>
+        <li><a title="Lien 2">Plat</a></li>
+        <li><a title="Lien 3">Dessert</a></li>
+      </ul>
+    </div>
+    
+</div> -->
+
+<HR id="ligne" align=center width="280px" > 
+
+
+<!------ Barre CREER UNE RECETTE -->
+<h1><span class="fa fa-pencil"></span> Ou ajoutez la votre !</h1>
+
+<input id="idutilisateur" type="hidden">
+
+<form class="navbar-form inline-form">
+    
+
+      <div id="creer" class="form-group">
+  
+        <input id="inputrecherche2" type="search" class="input-sm form-control" placeholder="Titre de la recette ">
+  
+        <button id="buttoncreer" type="button" class="btn btn-primary btn-sm"  data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">Types de plats  <span class="caret"></span></button>
+        <div class="dropdown-menu" aria-labelledby="buttoncreer">
+          <a class="dropdown-item" href="#">Entrée</a>
+          <a class="dropdown-item" href="#">Plat</a>
+          <a class="dropdown-item" href="#">Dessert</a>
+        </div>
+      </div>
+</form>
+
+
+
+
+<!---- Paramètres AJOUT RECETTE /Temps de préparation-->
+<div id="temps">
+
+    <div id="minutes" class="input-group mb-3">
+        <input id="inputminutes" type="text" class="form-control" placeholder="Temps de préparation" aria-label="Temps de préparation" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <span id="spanminutes" class="input-group-text">minutes</span>
+        </div>
+    </div>
+
+    <br>
+    <!---- Paramètres AJOUT RECETTE /Temps de cuisson-->
+    <div id="minutes" class="input-group mb-3">
+      <input id="inputminutes" type="text" class="form-control" placeholder="Temps de cuisson" aria-label="Temps de cuisson" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <span id="spanminutes" class="input-group-text">minutes</span>
+      </div>
+    </div>
+
+</div>
+
+<!-- Description NOUVELLE RECETTE-->
+
+<input id="description" type="search" class="input-sm form-control" placeholder="Description">
+<!--<textarea id="description" placeholder="   Description" name="negative" rows=2 COLS=20></textarea> <p></p>-->
+
+<div id="personnes" class="input-group mb-3">
+    <input id="inputpersonnes" type="text" class="form-control" placeholder="On est combien à manger?" aria-label="Temps de préparation" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <span id="spanpersonnes" class="input-group-text">personnes</span>
+    </div>
+</div>
+
+<div>
+    <button id="atable2" type="button" class="btn btn-info">A table !</button>
+</div>  
+   
+
+
+
+
+<!-- TEST -->
+<div class="row">
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item">Action - 1</button>
+          <button class="dropdown-item">Another Action</button>
+          <button class="dropdown-item">Something else is here</button>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+<!--FIN TEST-->
+
+
+
+<!-- /div container-->
+</div>
+
