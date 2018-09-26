@@ -8,6 +8,8 @@ import { CoursesComponent } from './composants/courses/courses.component';
 import { LoginComponent } from './composants/login/login.component';
 import { RecettesService } from './shared/services/recettes.service';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { HttpClientModule } from '../../node_modules/@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [RecettesService],
   bootstrap: [AppComponent]

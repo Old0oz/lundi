@@ -19,9 +19,9 @@ export interface RecetteInterface {
 
     /**
      * Temps de préparation
-     * @var temps_prepa: number
+     * @var temps_preparation: number
      */
-    temps_prepa: number;
+    temps_preparation: number;
 
     /**
      * Temps de cuisson
@@ -37,13 +37,13 @@ export interface RecetteInterface {
 
     /**
      * Id utilisateur
-     * @var id_utilisateur: number
+     * @var utilisateurs_id: number
      */
-    id_utilisateur: number;
+    utilisateurs_id: number;
 
     /**
-     * Id du type 
-     * @var id_types: number
+     * Id du type
+     * @var types_id:: number
      */
-    id_type: number;
+    types_id: number;
 }

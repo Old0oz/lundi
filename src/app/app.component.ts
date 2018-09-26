@@ -32,16 +32,16 @@ export class AppComponent {
     });
   }
 
-  public getMenus(): void{
-    this.recetteService.getMenus().subscribe((menus)=>{
+  public getMenus(): void {
+    this.recetteService.getMenus().subscribe((menus) => {
       console.log(menus.length + 'menus récupérées');
       this.menus = menus;
     });
   }
 
-  public getUsers():void{
-    this.recetteService.getUsers().subscribe((users)=>{
-      console.log(users.length +'users récupérés');
+  public getUsers(): void {
+    this.recetteService.getUsers().subscribe((users) => {
+      console.log( users.length + 'users récupérés' );
       this.users = users;
     });
   }

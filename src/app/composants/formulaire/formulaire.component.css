@@ -1,0 +1,205 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+
+.container {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+
+/* TEXTE */
+h1 {
+
+font-size: 24px;
+font-family: 'Bebas Neue';
+}
+
+/* BARRE DE RECHERCHE de RECETTE */
+#inputrecherche {
+    border-radius: 5px 0px 0px 5px;
+    height: 40px;
+    width: 240px;
+}
+
+#buttonrecherche {
+    border-radius: 0px 5px 5px 0px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color:  rgb(0, 184, 168);
+}
+
+
+#recherche{
+    margin-top: 10px;
+}
+
+
+
+/* FILTRES */
+#filtres {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#label {
+    font-weight:normal;
+    font-size: 12px;
+
+}
+
+
+/* BOUTON */
+#atable1 {
+    width: 280px;
+    height: 40px;
+    border: none;
+    background-color:  rgb(0, 184, 168);
+}
+
+
+
+/* LIGNE */
+#ligne {
+    margin-top: 40px;
+    height: 5px; 
+    height: 2px;
+	border: 0;
+	color: rgba(0, 0, 0, 0.384);
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+
+
+
+
+
+/* BARRE CREER UNE RECETTE */
+
+#creer {
+  margin: auto;
+  width: 50%;
+  margin-top: 10px;
+}
+
+
+
+#buttoncreer {
+    border-radius: 0px 5px 5px 0px;
+    height: 40px;
+    border: none;
+    background-color:  rgb(0, 184, 168);
+}
+
+
+#inputrecherche2 {
+    border-radius: 5px 0px 0px 5px;
+    height: 40px;
+    width: 170px;
+}
+
+
+
+
+/* TEMPS DE CUISSON */
+
+#minutes {
+    height: 40px;
+    width: 250px;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    
+}
+
+#temps {
+    margin: auto;
+    width: 200px;
+    text-align: center;
+}
+
+
+
+
+#inputminutes {
+    border-radius: 5px 0px 0px 5px;
+    height: 40px;
+    width: 240px;
+    
+    font-size: 12px;
+
+}
+
+.input-group-text {
+    border-radius: 0px 5px 5px 0px;
+}
+
+
+
+
+
+/* DESCRIPTION */#spanminutes {
+    border:   rgb(0, 184, 168);
+    background-color:  rgb(0, 184, 168);
+    color: white;
+    height: 40px;
+    width: 250px;
+    margin: auto;
+}
+#description {
+    
+    margin: auto;
+    border-radius: 5px 5px 5px 5px;
+    height: 80px;
+    width: 280px;
+
+}
+
+
+/* NOMBRE DE PERSONNES */
+#personnes {
+    height: 40px;
+    width: 280px;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    
+}
+
+#inputpersonnes {
+    border-radius: 5px 0px 0px 5px;
+    height: 40px;
+    width: 220px;
+    
+    font-size: 12px;
+
+}
+
+#spanpersonnes {
+    border:   rgb(0, 184, 168);
+    background-color:  rgb(0, 184, 168);
+    color: white;
+    height: 40px;
+    margin: auto;
+}
+
+
+
+
+
+/* BOUTON */
+#atable2 {
+    width: 280px;
+    margin-top: 15px;
+    border: none;
+    background-color: rgb(0, 184, 168);
+    height: 40px;
+    
+}
+
+

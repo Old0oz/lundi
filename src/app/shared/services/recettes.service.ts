@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'; 
+import { HttpClient } from '@angular/common/http';
 
-//Importer les modules d'observation
-import {Observable,Subject} from 'rxjs';
+// Importer les modules d'observation
+import {Observable, Subject} from 'rxjs';
 import {Constants} from './../constants/constants';
 
-//Importer toutes les interfaces nécessaires
+// Importer toutes les interfaces nécessaires
 import {RecetteInterface} from './../interfaces/recette-interface';
 import {CompositionsInterface} from './../interfaces/compositions-interface';
 import {IngredientsInterface} from './../interfaces/ingredients-interface';
@@ -27,7 +27,7 @@ export class RecettesService {
   private compositionsSubject: Subject<CompositionsInterface> = new Subject<CompositionsInterface>();
   private ingredientsSubject: Subject<IngredientsInterface> = new Subject<IngredientsInterface>();
   private expressionqtySubject: Subject<ExpressionqtyInterface> = new Subject<ExpressionqtyInterface>();
-  private userSubject: Subject<UserInterface> = new Subject<UserInterface>(); 
+  private userSubject: Subject<UserInterface> = new Subject<UserInterface>();
   private unitesmesureSubject: Subject<UnitesmesureInterface> = new Subject<UnitesmesureInterface>();
   private typeSubject: Subject<TypesInterface> = new Subject<TypesInterface>();
   private menuSubject: Subject<MenuInterface> = new Subject<MenuInterface>();
@@ -42,10 +42,10 @@ export class RecettesService {
   /**
    * Méthode pour get une recette
    */
-  public getRecettes(id: number = null):Observable<RecetteInterface[]>{
-    if (id !== null){
+  public getRecettes(id: number = null): Observable<RecetteInterface[]> {
+    if (id !== null) {
       return this._api.get<RecetteInterface[]>(
-        //parametres de la methode
+        // parametres de la methode
         Constants._API_RECETTE + '/' + id
       );
     } else {
@@ -59,10 +59,10 @@ export class RecettesService {
   /**
    * Méthode pour get un menu
    */
-  public getMenus(id: number = null):Observable<MenuInterface[]>{
-    if (id !== null){
+  public getMenus(id: number = null): Observable<MenuInterface[]> {
+    if (id !== null) {
       return this._api.get<MenuInterface[]>(
-        //parametres de la methode
+        // parametres de la methode
         Constants._API_MENU + '/' + id
       );
     } else {
@@ -75,10 +75,10 @@ export class RecettesService {
   /**
    * Méthode pour get un user
    */
-  public getUsers(id: number = null):Observable<UserInterface[]>{
-    if (id !== null){
+  public getUsers(id: number = null): Observable<UserInterface[]> {
+    if (id !== null) {
       return this._api.get<UserInterface[]>(
-        //parametres de la methode
+        // parametres de la methode
         Constants._API_USER + '/' + id
       );
     } else {
@@ -91,39 +91,39 @@ export class RecettesService {
   /**
    * Méthodes permettant aux autres classes de souscrire (observer/s'abonner) le sujet
    */
-  public getRecette(): Observable<RecetteInterface>{
+  public getRecette(): Observable<RecetteInterface> {
     return this.recetteSubject.asObservable();
   }
 
-  public getMenu(): Observable<MenuInterface>{
+  public getMenu(): Observable<MenuInterface> {
     return this.menuSubject.asObservable();
   }
 
-  public getCompo(): Observable<CompositionsInterface>{
+  public getCompo(): Observable<CompositionsInterface> {
     return this.compositionsSubject.asObservable();
   }
 
-  public getIngredient(): Observable<IngredientsInterface>{
+  public getIngredient(): Observable<IngredientsInterface> {
     return this.ingredientsSubject.asObservable();
   }
 
-  public getUser(): Observable<UserInterface>{
+  public getUser(): Observable<UserInterface> {
     return this.userSubject.asObservable();
   }
 
-  public getUnitMesur(): Observable<UnitesmesureInterface>{
+  public getUnitMesur(): Observable<UnitesmesureInterface> {
     return this.unitesmesureSubject.asObservable();
   }
 
-  public getType(): Observable<TypesInterface>{
+  public getType(): Observable<TypesInterface> {
     return this.typeSubject.asObservable();
   }
 
-  public getPlan(): Observable<PlanningInterface>{
+  public getPlan(): Observable<PlanningInterface> {
     return this.planningSubject.asObservable();
   }
 
-  public getExpQty(): Observable<ExpressionqtyInterface>{
+  public getExpQty(): Observable<ExpressionqtyInterface> {
     return this.expressionqtySubject.asObservable();
   }
 
@@ -131,7 +131,7 @@ export class RecettesService {
    * Diffuse le sujet vers les abonnés
    * @param recette RecetteInterface une recette captée qui sera diffusé
    */
-  public sendRecette(recette: RecetteInterface){
+  public sendRecette(recette: RecetteInterface) {
     this.recetteSubject.next(recette);
   }
 
@@ -139,7 +139,7 @@ export class RecettesService {
    * Diffuse le sujet vers les abonnés
    * @param Menu MenuInterface un menu capté qui sera diffusé
    */
-  public sendMenu(menu: MenuInterface){
+  public sendMenu(menu: MenuInterface) {
     this.menuSubject.next(menu);
   }
 
@@ -147,38 +147,26 @@ export class RecettesService {
    * Diffuse le sujet vers les abonnés
    * @param User UserInterface un user capté qui sera diffusé
    */
-  public sendUser(user: UserInterface){
+  public sendUser(user: UserInterface) {
     this.userSubject.next(user);
   }
 
   /**
    * Insère une recette dans la liste des todos
    * et diffuse la nouvelle recette créée
-   * @param recette
+   *  recette
    */
-  public addRecette(recette: RecetteInterface){
+  public addRecette(recette: RecetteInterface) {
     this._api.post<RecetteInterface[]>(
       Constants._API_RECETTE,
       recette
-    ).subscribe((addedRecette)=>{
-      
-      this.sendRecette(addedRecette[0]);
-
-      const _emptyRecette ={
-        titre:'',
-        instructions:'',
-        temps_prepa: null,
-        temps_cuisson:null,
-        nb_personnes:null,
-        id_utilisateur:null,
-        id_type:null
-      }
-      this.sendRecette(_emptyRecette);
-    });   
+    ).subscribe((result) => {
+      this.sendRecette(recette);
+    });
   }
 
 
 
 
-  
+
 }
