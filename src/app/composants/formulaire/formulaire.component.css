@@ -14,8 +14,9 @@
 /* TEXTE */
 h1 {
 
-font-size: 24px;
+font-size: 28px;
 font-family: 'Bebas Neue';
+margin-top: 20px;
 }
 
 /* BARRE DE RECHERCHE de RECETTE */
@@ -23,6 +24,7 @@ font-family: 'Bebas Neue';
     border-radius: 5px 0px 0px 5px;
     height: 40px;
     width: 240px;
+
 }
 
 #buttonrecherche {
@@ -30,20 +32,31 @@ font-family: 'Bebas Neue';
     height: 40px;
     width: 40px;
     border: none;
-    background-color:  rgb(0, 184, 168);
+    background-color: #ffaf19;
+    margin-top: 15px;
 }
 
+#buttonrecherche1 {
+        border-radius: 0px 5px 5px 0px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: #ffaf19;
+}
 
 #recherche{
     margin-top: 10px;
+    text-align: center;
+    display: inline-block;
 }
 
 
 
 /* FILTRES */
 #filtres {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 #label {
@@ -58,16 +71,15 @@ font-family: 'Bebas Neue';
     width: 280px;
     height: 40px;
     border: none;
-    background-color:  rgb(0, 184, 168);
+    background-color: #ffaf19;
 }
 
 
 
 /* LIGNE */
 #ligne {
-    margin-top: 40px;
-    height: 5px; 
-    height: 2px;
+    margin-top: 40px; 
+    height: 1px;
 	border: 0;
 	color: rgba(0, 0, 0, 0.384);
     background-color: rgba(0, 0, 0, 0.61);
@@ -81,25 +93,43 @@ font-family: 'Bebas Neue';
 /* BARRE CREER UNE RECETTE */
 
 #creer {
-  margin: auto;
-  width: 50%;
   margin-top: 10px;
+  display: inline-block;
+  text-align: center;
+  
 }
 
+#lalala {
+    display: inline-block;
+}
 
 
 #buttoncreer {
     border-radius: 0px 5px 5px 0px;
     height: 40px;
     border: none;
-    background-color:  rgb(0, 184, 168);
+    background-color: #ffaf19;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: none;
 }
 
 
 #inputrecherche2 {
     border-radius: 5px 0px 0px 5px;
     height: 40px;
-    width: 170px;
+    width: 182px;
+    margin: none;
+}
+
+.col {
+    margin: none;
+    padding: 0px;
+}
+
+#avion {
+    display: inline-block; 
 }
 
 
@@ -108,18 +138,26 @@ font-family: 'Bebas Neue';
 /* TEMPS DE CUISSON */
 
 #minutes {
-    height: 40px;
-    width: 250px;
-    margin: auto;
-    display: inline-block;
-    text-align: center;
+    background-color: #ffaf19;
+    font-size: 12px;
+    color: white;
+    border: #ffaf19;
+    border-radius: 0px 5px 5px 0px;
     
 }
 
+
+#tempscuisson {
+    border-radius: 5px 0px 0px 5px;
+    height: 40px;
+}
+
+
 #temps {
     margin: auto;
-    width: 200px;
+    width: 280px;
     text-align: center;
+    margin-top: 15px;
 }
 
 
@@ -144,7 +182,7 @@ font-family: 'Bebas Neue';
 
 /* DESCRIPTION */#spanminutes {
     border:   rgb(0, 184, 168);
-    background-color:  rgb(0, 184, 168);
+    background-color: #ffaf19;
     color: white;
     height: 40px;
     width: 250px;
@@ -153,6 +191,7 @@ font-family: 'Bebas Neue';
 #description {
     
     margin: auto;
+    margin-top: 15px;
     border-radius: 5px 5px 5px 5px;
     height: 80px;
     width: 280px;
@@ -182,7 +221,7 @@ font-family: 'Bebas Neue';
 
 #spanpersonnes {
     border:   rgb(0, 184, 168);
-    background-color:  rgb(0, 184, 168);
+    background-color:  #ffaf19;
     color: white;
     height: 40px;
     margin: auto;
@@ -197,9 +236,38 @@ font-family: 'Bebas Neue';
     width: 280px;
     margin-top: 15px;
     border: none;
-    background-color: rgb(0, 184, 168);
+    background-color:#ffaf19;
     height: 40px;
     
 }
 
+
+
+/* NGB2 : LES RECETTES */
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: left;
+
+}
+
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#supprecette {
+    margin-left: 28px;
+    margin-top: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+
+
+::placeholder {
+    font-size: 14px;
+}
 
