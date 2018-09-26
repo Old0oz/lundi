@@ -1,3 +1,40 @@
-<p>
-  formulaire2 works!
-</p>
+<!-- NG TEMPLATE 2 !-->
+<ng-template #content2 let-modal>
+    <div class="modal-header">
+      <h3 class="modal-title">Si vous changez d'avis :</h3>
+  
+      <button id="supprecette" type="button" class="btn btn-danger" aria-label="Close">Supprimer cette recette</button>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  
+    <div class="modal-body">
+  
+      <!-- DEBUT 2eme HTML -->
+  
+      <div class="container">
+  
+        <h1>
+          <span class="fa fa-cutlery"> </span> La quiche aux endives</h1>
+  
+        <h2>Etape 1: Laver les endives</h2>
+        <h2>Etape 2: Faire la pâte</h2>
+        <h2>Etape 3: Blabla</h2>
+        <h2>Etape 4: Blabla</h2>
+  
+      </div>
+      <!--Container-->
+  
+  
+      <!-- Fin du formulaire complet -->
+    </div>
+  
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    </div>
+    <!-- FIN Ng Template-->
+  
+  </ng-template>
+
+  <button class="btn btn-outline-primary mb-2 mr-2" (click)="openLg(content2)">Lire la recette</button>
