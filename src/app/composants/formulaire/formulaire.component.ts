@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { RecetteInterface } from '../../shared/interfaces/recette-interface';
 import { RecettesService } from '../../shared/services/recettes.service';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
+
+
 @Component({
   selector: 'app-formulaire',
   templateUrl: './formulaire.component.html',
@@ -15,6 +20,7 @@ export class FormulaireComponent implements OnInit {
 
   constructor(
     private recettesService: RecettesService,
+    private modalService: NgbModal,
     private formBuilder: FormBuilder) {
 
     this.recetteToAdd = {
@@ -23,7 +29,7 @@ export class FormulaireComponent implements OnInit {
     temps_preparation: null,
     temps_cuisson: null,
     nb_personnes: null,
-    utilisateurs_id: null,
+    utilisateurs_id: 1111,
     types_id: null
     };
 
@@ -65,4 +71,8 @@ export class FormulaireComponent implements OnInit {
       this.recettesService.addRecette(_recette);
     }
   }
+  openLg(content) {
+    this.modalService.open(content, { size: 'lg' });
+  }
+
 }
