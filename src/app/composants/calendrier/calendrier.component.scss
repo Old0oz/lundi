@@ -1,7 +1,7 @@
-$dayBase: 70px;
-$cloud: rgb(174, 174, 241);
+$dayBase: 100px;
+$cloud: rgb(210, 210, 250);
 $base: 10px;
-$concrete: cyan;
+$concrete: rgb(205, 247, 247);
 $seafoam: pink;
 $white: white;
 $teal: teal;
@@ -9,8 +9,8 @@ $light-blue-grey:grey;
 
 .calendar {
   display: block;
-  width: $dayBase * 7;
-  margin: 0 auto;
+  width: 100%;
+  margin: auto;
 
   * {
     box-sizing: border-box;
@@ -21,17 +21,17 @@ $light-blue-grey:grey;
   }
 
   .month-nav {
-    padding: $base;
+    padding: $base;   ///$base
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .year-nav {
     padding: $base;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     font-family: 'Montserrat';
   }
 
@@ -54,9 +54,9 @@ $light-blue-grey:grey;
     .week-date,
     .day-name {
       text-align: center;
-      padding: $base;
+      padding: 30px;
       display: block;
-      width: $dayBase;
+      width: 80%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -68,7 +68,7 @@ $light-blue-grey:grey;
 
       .date-text {
         z-index: 10;
-        font-size: 10px;
+        font-size: 20px;
         font-family: 'Montserrat', sans-serif;
       }
 
@@ -84,23 +84,22 @@ $light-blue-grey:grey;
         transition: background-color 150ms linear, color 150ms linear;
         z-index: 1;
       }
-
-      &.enabled {
+&.enabled {
         cursor: pointer;
         &:hover {
           &:after {
-           // background-color: $seafoam;
+       //    background-color: $seafoam;
           }
         }
       }
       &.selected {
         color: $white;
         &:after {
-          background-color: $teal;
+         // background-color: $teal;
         }
         &:hover {
           &:after {
-            background-color: $teal;
+        //    background-color: $teal;
           }
         }
       }
@@ -114,4 +113,4 @@ $light-blue-grey:grey;
       font-weight: bold;
     }
   }
-} 
+}

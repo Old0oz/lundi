@@ -6,6 +6,7 @@ import * as moment from 'moment';
 import * as _ from 'lodash';
 import { JsonPipe } from '../../../../node_modules/@angular/common';
 
+
 export interface CalendarDate {
   mDate: moment.Moment;
   selected?: boolean;
@@ -19,14 +20,17 @@ export interface CalendarDate {
 export class CalendrierComponent implements OnInit, OnChanges {
 
   currentDate = moment();
-  dayNames = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+  dayNames = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
   weeks: CalendarDate[][] = [];
   sortedDates: CalendarDate[] = [];
+  //Définition d'une variable pour récupérer la date sélectionnée
+  SelectedDate: string;
+  
 
   @Input() selectedDates: CalendarDate[] = [];
   @Output() onSelectDate = new EventEmitter<CalendarDate>();
 
-  constructor() {}
+  constructor(private recetteservice: RecettesService) {}
 
   ngOnInit(): void {
     this.generateCalendar();
@@ -61,11 +65,12 @@ export class CalendrierComponent implements OnInit, OnChanges {
     this.onSelectDate.emit(date);
     let DATE: string;
     DATE = JSON.stringify(date.mDate).substr(1,10);
-    let DATE2=moment(DATE,'YYYY-MM-DD');
-    DATE2=DATE2.add(1,'day');
+    //let DATE2=moment(DATE,'YYYY-MM-DD');
+    this.SelectedDate = JSON.stringify(DATE);
     //this.noConnexion=!this.noConnexion;
     console.log(DATE);
-    console.log(DATE2);
+    //console.log(DATE2);
+    this.recetteservice.sendSelectDate(this.SelectedDate);
   }
 
   // actions from calendar
@@ -124,11 +129,5 @@ export class CalendrierComponent implements OnInit, OnChanges {
               };
             });
   }
-
-  public noConnexion: Boolean = true;
-  public toggleConnexion(): void {
-    this.noConnexion=!this.noConnexion;
-  }
   
-
 }

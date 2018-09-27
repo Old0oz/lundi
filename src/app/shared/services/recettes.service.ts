@@ -15,6 +15,7 @@ import {UnitesmesureInterface} from './../interfaces/unitesmesure-interface';
 import {TypesInterface} from './../interfaces/types-interface';
 import {MenuInterface} from './../interfaces/menu-interface';
 import {PlanningInterface} from './../interfaces/planning-interface';
+import * as moment from 'moment';
 
 @Injectable({
   providedIn: 'root'
@@ -32,7 +33,7 @@ export class RecettesService {
   private typeSubject: Subject<TypesInterface> = new Subject<TypesInterface>();
   private menuSubject: Subject<MenuInterface> = new Subject<MenuInterface>();
   private planningSubject: Subject<PlanningInterface> = new Subject<PlanningInterface>();
-
+  private selectdateSubject: Subject<string> = new Subject<string>();
   /**
    * Injection de la dépendence HttpClient
    * @param _api: HttpCLient Transport vers le backend
@@ -66,6 +67,7 @@ export class RecettesService {
         Constants._API_MENU + '/' + id
       );
     } else {
+      
       return this._api.get<MenuInterface[]>(
         Constants._API_MENU
       );
@@ -91,6 +93,20 @@ export class RecettesService {
   /**
    * Méthodes permettant aux autres classes de souscrire (observer/s'abonner) le sujet
    */
+  /**
+   * Getter pour la date selectionnee
+   */
+  public getSelectDate():Observable<string>{
+    return this.selectdateSubject.asObservable();
+  }
+  /**
+   * 
+   * @param param Setter pour la date selectionnee
+   */
+  public sendSelectDate(param: string){
+    this.selectdateSubject.next(param);
+  }
+
   public getRecette(): Observable<RecetteInterface> {
     return this.recetteSubject.asObservable();
   }
@@ -165,8 +181,20 @@ export class RecettesService {
     });
   }
 
+  /**
+   * Getters et setters pour les menus
+   */
+  /**GetAllMenus */
+  public getAllMenus(): Observable<MenuInterface> {
+    return this.menuSubject.asObservable();
+  }
 
-
-
+  /**
+   * Diffuse le sujet vers les abonnés
+   * @param recette RecetteInterface une recette captée qui sera diffusé
+   */
+  public sendMenus(menus: MenuInterface) {
+    this.menuSubject.next(menus);
+  }
 
 }

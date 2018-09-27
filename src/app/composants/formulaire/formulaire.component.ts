@@ -4,6 +4,8 @@ import { RecettesService } from '../../shared/services/recettes.service';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Subscription } from '../../../../node_modules/rxjs';
+import * as moment from 'moment';
 
 
 
@@ -17,12 +19,18 @@ export class FormulaireComponent implements OnInit {
   private recetteToAdd: RecetteInterface;
   public recetteForm: FormGroup;
   public type: number;
+  public selectdateSubscription: Subscription;
+  private retrievedDate: any;
+
 
   constructor(
     private recettesService: RecettesService,
     private modalService: NgbModal,
     private formBuilder: FormBuilder) {
-
+    this.selectdateSubscription=recettesService.getSelectDate().subscribe((selectDate) =>{
+        this.retrievedDate=selectDate;
+        console.log('Date retenue : '+ this.retrievedDate);
+    });  
     this.recetteToAdd = {
     titre: '',
     instructions: '',
@@ -72,7 +80,7 @@ export class FormulaireComponent implements OnInit {
     }
   }
   openLg(content) {
-    this.modalService.open(content, { size: 'lg' });
+    this.modalService.open(content, { size: 'lg'});
   }
 
 }
