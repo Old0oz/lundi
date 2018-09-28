@@ -4,57 +4,47 @@
     <h1>
       {{ title }}!
     </h1>
-    <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+    <img width="300" alt="Angular Logo" src="food2.png">
   </div>
 
-  <table>
+  <table id="table" class="table">
+      <thead id="head" class="thead-dark">
+        <tr>
+          <th id="leth" scope="col">&nbsp;</th>
+          <th scope="col">Lundi</th>
+          <th scope="col">Mardi</th>
+          <th scope="col">Mercredi</th>
+          <th scope="col">Jeudi</th>
+          <th scope="col">Vendredi</th>
+          <th scope="col">Samedi</th>
+          <th scope="col">Dimanche</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th  id="leth">Déjeuner</th>
+          <td> <app-formulaire></app-formulaire>  <app-formulaire2></app-formulaire2></td> 
+          <td> <app-formulaire></app-formulaire>  <app-formulaire2></app-formulaire2></td>   
+          <td> <app-formulaire></app-formulaire> <app-formulaire2></app-formulaire2></td>   
+          <td> <app-formulaire></app-formulaire> <app-formulaire2></app-formulaire2></td>    
+          <td> <app-formulaire></app-formulaire>  <app-formulaire2></app-formulaire2></td>      
+          <td> <app-formulaire></app-formulaire> <app-formulaire2></app-formulaire2></td>        
+          <td> <app-formulaire></app-formulaire>  <app-formulaire2></app-formulaire2></td>         
+        </tr>
+        
+        <tr >
+            <th id="leth" >Diner</th>
+            <td> <app-formulaire></app-formulaire>  <app-formulaire2></app-formulaire2></td> 
+            <td> <app-formulaire></app-formulaire> <app-formulaire2></app-formulaire2></td>   
+            <td> <app-formulaire></app-formulaire>  <app-formulaire2></app-formulaire2></td>   
+            <td> <app-formulaire></app-formulaire>  <app-formulaire2></app-formulaire2></td>    
+            <td> <app-formulaire></app-formulaire>  <app-formulaire2></app-formulaire2></td>      
+            <td> <app-formulaire></app-formulaire>  <app-formulaire2></app-formulaire2></td>        
+            <td> <app-formulaire></app-formulaire>  <app-formulaire2></app-formulaire2></td>         
+          </tr>
+      
 
-    <tr>
-      <td>&nbsp;</td>
-      <td>lundi</td>
-      <td>mardi</td>
-      <td>mercredi</td>
-      <td>jeudi</td>
-    </tr>
-    <tr>
-      <td>matin</td>
-      <td>
-        <app-formulaire></app-formulaire>
-        <app-formulaire2></app-formulaire2>
-      </td>
-      <td>
-        <app-formulaire></app-formulaire>
-        <app-formulaire2></app-formulaire2>
-      </td>
-      <td>
-        <app-formulaire></app-formulaire>
-        <app-formulaire2></app-formulaire2>
-      </td>
-      <td>
-        <app-formulaire></app-formulaire>
-        <app-formulaire2></app-formulaire2>
-      </td>
-    </tr>
-    <tr>
-      <td>soir</td>
-      <td>
-        <app-formulaire></app-formulaire>
-        <app-formulaire2></app-formulaire2>
-      </td>
-      <td>
-        <app-formulaire></app-formulaire>
-        <app-formulaire2></app-formulaire2>
-      </td>
-      <td>
-        <app-formulaire></app-formulaire>
-        <app-formulaire2></app-formulaire2>
-      </td>
-      <td>
-        <app-formulaire></app-formulaire>
-        <app-formulaire2></app-formulaire2>
-      </td>
-    </tr>
-
-  </table>
-
-</div>
+      </tbody>
+    </table>
+    
+  

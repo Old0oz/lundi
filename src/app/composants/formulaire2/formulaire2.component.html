@@ -9,20 +9,73 @@
       </button>
     </div>
   
-    <div class="modal-body">
+    <div id="modal-body" class="modal-body">
   
       <!-- DEBUT 2eme HTML -->
   
       <div class="container">
   
-        <h1>
-          <span class="fa fa-cutlery"> </span> La quiche aux endives</h1>
+
+
+        <h1><span id="icon" class="fa fa-cutlery"> </span> La quiche aux endives</h1>
+        
+        <hr id="ligne" align=center width="280px">
+
   
-        <h2>Etape 1: Laver les endives</h2>
-        <h2>Etape 2: Faire la pâte</h2>
-        <h2>Etape 3: Blabla</h2>
-        <h2>Etape 4: Blabla</h2>
-  
+
+        <div id="details" class="d-inline-block">
+            <div id="elementdetails" class="d-inline-block">
+              <p id="p1">Préparation</p>
+              <p>20 min</p>
+            </div>
+
+            <div id="elementdetails2" class="d-inline-block">
+              <p id="p1">Cuisson</p>
+              <p>20 min</p>
+            </div>
+
+            <div id="elementdetails" class="d-inline-block">
+                <p id="p1">Nombre de personnes</p>
+                <p>4</p>
+            </div>
+        </div>
+
+
+      <!-- LISTE DES INGREDIENTS-->
+      <div id="tableau">
+      <h2>Ingrédients</h2>
+
+        <ul class="list-group">
+            <li id="tableauingredients" class="list-group-item d-flex justify-content-between align-items-center">
+              Farine
+              <span id="quantité" class="badge badge-primary badge-pill">500g</span>
+            </li>
+            <li id="tableauingredients" class="list-group-item d-flex justify-content-between align-items-center">
+              Oeufs
+              <span id="quantité" class="badge badge-primary badge-pill">4</span>
+            </li>
+            <li id="tableauingredients" class="list-group-item d-flex justify-content-between align-items-center">
+              Lait
+              <span id="quantité" class="badge badge-primary badge-pill">400ml</span>
+            </li>
+          </ul>
+        </div>
+      <!-- LISTE DES INGREDIENTS-->
+
+
+      <!--DESCRIPTION - ETAPES A SUIVRE-->
+      <div id="etapes">
+
+        <h2>Etapes de la recette</h2>
+        <li id="tableauingredients" class=" d-flex justify-content-between align-items-center">
+            Faire ci, faire ça . Couper ceci puis cela. J'ai la dalle on mange quand blabla blablabla nanani nanana c'est délicieux
+        </li>
+
+      </div>
+      <!--DESCRIPTION - ETAPES A SUIVRE-->
+
+
+      <!--Container-->
       </div>
       <!--Container-->
   
@@ -30,11 +83,8 @@
       <!-- Fin du formulaire complet -->
     </div>
   
-    <div class="modal-footer">
-      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
-    </div>
     <!-- FIN Ng Template-->
   
   </ng-template>
 
-  <button class="btn btn-outline-primary mb-2 mr-2" (click)="openLg(content2)">Lire la recette</button>
+  <button id="button2" class="btn btn-outline-primary mb-2 mr-2" (click)="openLg(content2)"><i class="fas fa-glasses"></i></button>

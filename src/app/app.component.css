@@ -1,0 +1,25 @@
+td { border:none; }
+
+td#1 { border:none;
+margin: none; 
+padding: none;}
+
+th { border:none; }
+
+#diner {
+}
+
+#head {
+    padding:  30px;
+    background-color: rgba(0, 0, 0, 0.89);
+}
+
+#table {
+    background-color: rgba(0, 0, 0, 0.856);
+}
+
+#leth {
+    color: white;
+    text-align: center;
+}
+

@@ -180,7 +180,8 @@ margin-top: 20px;
 
 
 
-/* DESCRIPTION */#spanminutes {
+/* DESCRIPTION */
+#spanminutes {
     border:   rgb(0, 184, 168);
     background-color: #ffaf19;
     color: white;
@@ -255,6 +256,7 @@ h2 {
 
 h3 {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
 
 }
 
@@ -269,5 +271,16 @@ h3 {
 
 ::placeholder {
     font-size: 14px;
+}
+
+
+/* BOUTONS */
+#button1 {
+    background-color: #ffaf19;
+    border: none;
+    color: white;
+    padding: 15px;
+    padding-left: 18px;
+    padding-right: 18px;
 }
 

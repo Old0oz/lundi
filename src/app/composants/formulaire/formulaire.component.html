@@ -138,7 +138,7 @@
         <!-- AJOUT des INGREDIENTS-->
 
         <!-- RESCRIPTION DE LA RECETTE -->
-        <input id="description" type="text" class="input-sm form-control" formControlName="instructions" placeholder="description">
+        <input id="description" type="text" class="input-sm form-control" formControlName="instructions" placeholder="Description">
         <!-- RESCRIPTION DE LA RECETTE -->
 
         <!-- NOMBRE DE PERSONNES -->
@@ -160,12 +160,9 @@
 
       </form>
 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
-      </div>
       
     </div>
   </div>  
 </ng-template>
 
-<button class="btn btn-outline-primary mb-2 mr-2" (click)="openLg(content)">Choisir une recette</button>
+<button id="button1" class="btn btn-outline-primary mb-2 mr-2" (click)="openLg(content)"><i class="fas fa-utensils"></i></button>
