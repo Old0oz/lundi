@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RecettesService } from './shared/services/recettes.service';
 import { RecetteInterface } from './shared/interfaces/recette-interface';
 import {CompositionsInterface} from './shared/interfaces/compositions-interface';
@@ -9,20 +9,21 @@ import {UnitesmesureInterface} from './shared/interfaces/unitesmesure-interface'
 import {TypesInterface} from './shared/interfaces/types-interface';
 import {MenuInterface} from './shared/interfaces/menu-interface';
 import {PlanningInterface} from './shared/interfaces/planning-interface';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'lundi';
 
   public recettes: RecetteInterface[];
   public menus: MenuInterface[];
   public users: UserInterface[];
 
-  constructor(private recetteService: RecettesService) {}
+  constructor(private recetteService: RecettesService, private spinner: NgxSpinnerService) {}
 
   public getRecettes(): void {
     this.recetteService.getRecettes().subscribe((recettes) => {
@@ -45,4 +46,9 @@ export class AppComponent {
       this.users = users;
     });
   }
+  ngOnInit() { /* spinner starts on init */
+    this.spinner.show();
+
+    setTimeout(() => {
+        /* spinner ends after 5 seconds */ this.spinner.hide(); }, 100000000000); }
 }

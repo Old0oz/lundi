@@ -15,7 +15,7 @@ th { border:none; }
 }
 
 #table {
-    background-color: rgba(0, 0, 0, 0.856);
+    background-color: rgba(0, 0, 0, 0.507);
 }
 
 #leth {
@@ -23,3 +23,29 @@ th { border:none; }
     text-align: center;
 }
 
+.loading2 { text-align:
+    center;
+    margin-right: auto;
+    margin-left: auto;
+    color: rgb(255, 175, 25);
+    font-size: 28px; }
+
+.loading1 { text-align: center; margin-top: 20%; margin-right: auto; margin-left: auto; color: rgb(255, 175, 25); font-size: 28px; }
+
+#column { height: 938px;
+    background-color: black;
+    background-position:center center;
+    background-image:url(../assets/picture/BBLA.jpg);
+    background-repeat: repeat; }
+
+#fond {
+    background-color: rgb(71, 71, 71);
+}
+
+h1 {
+    font-family: 'Bebas Neue';
+    font-size: 100px;
+    text-align: center;
+    color: black
+    
+}
