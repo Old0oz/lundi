@@ -14,6 +14,6 @@ export class Formulaire2Component implements OnInit {
   ngOnInit() {
   }
   openLg(content) {
-    this.modalService.open(content, { size: 'lg' });
+    this.modalService.open(content, { size: 'lg', /* recette */ });
   }
 }
