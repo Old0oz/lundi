@@ -4,7 +4,7 @@ export interface MenuInterface {
      * @var (optional) id_plan: number
      */
     id_plan?: number;
-    
+
     /**
      * Identifiant de la recette du planning
      * @var (optional) id_rec: number

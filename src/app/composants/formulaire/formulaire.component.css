@@ -1,8 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
-
-
-
-
 .container {
     text-align: center;
     margin-right: auto;
@@ -11,7 +6,7 @@
 }
 
 
-/* TEXTE */
+/* TEXTE /
 h1 {
 
 font-size: 28px;
@@ -19,7 +14,7 @@ font-family: 'Bebas Neue';
 margin-top: 20px;
 }
 
-/* BARRE DE RECHERCHE de RECETTE */
+/ BARRE DE RECHERCHE de RECETTE /
 #inputrecherche {
     border-radius: 5px 0px 0px 5px;
     height: 40px;
@@ -52,7 +47,7 @@ margin-top: 20px;
 
 
 
-/* FILTRES */
+/ FILTRES /
 #filtres {
     margin-top: 20px;
     margin-bottom: 30px;
@@ -66,7 +61,7 @@ margin-top: 20px;
 }
 
 
-/* BOUTON */
+/ BOUTON /
 #atable1 {
     width: 280px;
     height: 40px;
@@ -76,12 +71,12 @@ margin-top: 20px;
 
 
 
-/* LIGNE */
+/ LIGNE /
 #ligne {
     margin-top: 40px; 
     height: 1px;
-	border: 0;
-	color: rgba(0, 0, 0, 0.384);
+    border: 0;
+    color: rgba(0, 0, 0, 0.384);
     background-color: rgba(0, 0, 0, 0.61);
 }
 
@@ -90,13 +85,13 @@ margin-top: 20px;
 
 
 
-/* BARRE CREER UNE RECETTE */
+/ BARRE CREER UNE RECETTE */
 
 #creer {
   margin-top: 10px;
   display: inline-block;
   text-align: center;
-  
+
 }
 
 #lalala {
@@ -131,10 +126,6 @@ margin-top: 20px;
 #avion {
     display: inline-block; 
 }
-
-
-
-
 /* TEMPS DE CUISSON */
 
 #minutes {
@@ -143,7 +134,7 @@ margin-top: 20px;
     color: white;
     border: #ffaf19;
     border-radius: 0px 5px 5px 0px;
-    
+
 }
 
 
@@ -167,7 +158,7 @@ margin-top: 20px;
     border-radius: 5px 0px 0px 5px;
     height: 40px;
     width: 240px;
-    
+
     font-size: 12px;
 
 }
@@ -180,7 +171,8 @@ margin-top: 20px;
 
 
 
-/* DESCRIPTION */#spanminutes {
+/* DESCRIPTION */
+#spanminutes {
     border:   rgb(0, 184, 168);
     background-color: #ffaf19;
     color: white;
@@ -189,7 +181,7 @@ margin-top: 20px;
     margin: auto;
 }
 #description {
-    
+
     margin: auto;
     margin-top: 15px;
     border-radius: 5px 5px 5px 5px;
@@ -199,7 +191,7 @@ margin-top: 20px;
 }
 
 
-/* NOMBRE DE PERSONNES */
+/* / NOMBRE DE PERSONNES / */
 #personnes {
     height: 40px;
     width: 280px;
@@ -207,14 +199,14 @@ margin-top: 20px;
     display: inline-block;
     text-align: center;
     margin-top: 10px;
-    
+
 }
 
 #inputpersonnes {
     border-radius: 5px 0px 0px 5px;
     height: 40px;
     width: 220px;
-    
+
     font-size: 12px;
 
 }
@@ -231,19 +223,19 @@ margin-top: 20px;
 
 
 
-/* BOUTON */
+/* / BOUTON / */
 #atable2 {
     width: 280px;
     margin-top: 15px;
     border: none;
     background-color:#ffaf19;
     height: 40px;
-    
+
 }
 
 
 
-/* NGB2 : LES RECETTES */
+/* / NGB2 : LES RECETTES / */
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
@@ -255,6 +247,7 @@ h2 {
 
 h3 {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
 
 }
 
@@ -271,3 +264,13 @@ h3 {
     font-size: 14px;
 }
 
+
+/* / BOUTONS */ */
+#button1 {
+    background-color: #ffaf19;
+    border: none;
+    color: white;
+    padding: 15px;
+    padding-left: 18px;
+    padding-right: 18px;
+}

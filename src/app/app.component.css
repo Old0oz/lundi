@@ -1,0 +1,45 @@
+.loading2 {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    color: rgb(255, 175, 25);
+    font-size: 28px;
+}
+.loading1 {
+    text-align: center;
+    margin-top: 20%;
+    margin-right: auto;
+    margin-left: auto;
+    color: rgb(255, 175, 25);
+    font-size: 28px;
+}
+container {
+    background-color: black;
+    background-attachment:fixed;
+    background-position:center center;
+    background-image:url(../assets/picture/cube.jpg);
+    }
+td { border:none; }
+
+td#1 { border:none;
+margin: none; 
+padding: none;}
+
+th { border:none; }
+
+#diner {
+}
+
+#head {
+    padding:  30px;
+    background-color: rgba(0, 0, 0, 0.89);
+}
+
+#table {
+    background-color: rgba(0, 0, 0, 0.856);
+}
+
+#leth {
+    color: white;
+    text-align: center;
+}    
